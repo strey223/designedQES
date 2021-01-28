@@ -11,3 +11,4 @@ switch ($desktop) {
     default:
         include './html/desktop1.html';
 }
+// полезной информции в заголовке 1140
