@@ -1,0 +1,44 @@
+body {
+}
+
+h1 {
+    color: red;
+    background-color: #FFFFFF;
+}
+
+.header {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.header div {
+    display: inline-block;
+    top: 50%;
+    vertical-align: middle;
+}
+.header .call-info div {
+    display: inline-block;
+    width: 100%;
+    top: 50%;
+    vertical-align: middle;
+}
+
+.body {
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #E5E5E5;
+}
+
+.picture-logo {
+
+}
+
+span.breadcrumb {
+    size: 14px;
+    line-height: 19px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.call-order {
+
+}
