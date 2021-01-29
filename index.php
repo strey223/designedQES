@@ -3,10 +3,13 @@ $desktop = $_GET['desktop'] ?? 'one';
 
 switch ($desktop) {
     case 'one':
-        include './html/desktop1.html';
+        $hello = file_get_contents('./html/desktop1.html');
+        echo $hello;
         break;
     case 'two':
-        include './html/desktop2.html';
+        $hello2 = file_get_contents('./html/desktop2.html');
+        echo $hello2;
+
         break;
     default:
         include './html/desktop1.html';

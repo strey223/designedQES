@@ -3,39 +3,18 @@ h1 {
     background-color: #FFFFFF;
 }
 
-.header {
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-.header div {
-    display: inline-block;
-    top: 50%;
-    vertical-align: middle;
-}
-.header .call-info div {
-    display: inline-block;
-    width: 100%;
-    top: 50%;
-    vertical-align: middle;
-}
-
 .body {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 390px;
+    padding-right: 390px;
     background-color: #E5E5E5;
 }
 
 .info-reference a {
-    margin-left: 2.5%; /* от 1140  */
+    margin-right: 24px; /* от 1140  */
 }
 
 span.breadcrumb {
     size: 14px;
     line-height: 19px;
     font-family: 'Manrope', sans-serif;
-}
-
-.call-order {
-
 }
