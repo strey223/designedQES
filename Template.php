@@ -54,7 +54,6 @@ class Template
         foreach($addressLinks as $addressLink) {
             $textLinks .=  "<link rel=\"stylesheet\" href=\"$addressLink\">";
         }
-
         return $textLinks;
     }
 }
