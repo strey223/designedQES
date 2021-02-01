@@ -18,3 +18,7 @@ span.breadcrumb {
     line-height: 19px;
     font-family: 'Manrope', sans-serif;
 }
+
+div.breadcrumb {
+    height: 19px;
+}
