@@ -1,17 +1,29 @@
 <?php
+include 'Template.php';
+
 $desktop = $_GET['desktop'] ?? 'one';
+$cssLinks = ['css/header.css'];
+$header = Template::getHtml('header.html');
+$params = [
+    'header' => $header,
+];
+$html = '';
 
 switch ($desktop) {
     case 'one':
-        $hello = file_get_contents('./html/desktop1.html');
-        echo $hello;
+        $cssLinks[] = 'css/desktop1.css';
+        $params['linkCss'] = Template::getCssLinks($cssLinks);
+
+        $html = Template::getHtml('desktop1.html', $params);
         break;
     case 'two':
-        $hello2 = file_get_contents('./html/desktop2.html');
-        echo $hello2;
+        $cssLinks = 'css/desktop2.css';
+
+        $html = Template::getHtml('desktop2.html');
 
         break;
     default:
-        include './html/desktop1.html';
+        $html = Template::getHtml('notFound.html');
 }
-// полезной информции в заголовке 1140
+
+echo $html;
