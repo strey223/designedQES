@@ -6,6 +6,7 @@ $cssLinks = ['css/header.css'];
 $header = Template::getHtml('header.html');
 $params = [
     'header' => $header,
+    'infoCertificate' => 'ООО Айтиком, заявка ЕПГУ №681941 Юрченко Елена Анатольевна',
 ];
 $html = '';
 
