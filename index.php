@@ -18,6 +18,7 @@ switch ($desktop) {
         $params['scriptJs'] = Template::getJsScripts($jsScripts);
         $params['boxInfo'] = Template::getFormatingHtmlStepBox(2);
         $params['stepInfo'] = Template::getFormatingHtmlStepNumber(2);
+        $params['textStep'] = Template::getStepText(2);
 
         $html = Template::getHtml('desktop1.html', $params);
         break;

@@ -89,3 +89,15 @@ div.breadcrumb {
 .step-box .step-fifth{
     left: -97px;
 }
+
+.text-step {
+    width: 753px;
+    padding-top: 40px;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #333333;
+}
