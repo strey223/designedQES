@@ -3,6 +3,7 @@ include 'Template.php';
 
 $desktop = $_GET['desktop'] ?? 'one';
 $cssLinks = ['css/header.css'];
+$jsScripts = ['js/desktop.js'];
 $header = Template::getHtml('header.html');
 $params = [
     'header' => $header,
@@ -14,7 +15,8 @@ switch ($desktop) {
     case 'one':
         $cssLinks[] = 'css/desktop1.css';
         $params['linkCss'] = Template::getCssLinks($cssLinks);
-        $params['boxInfo'] = Template::getFormatingHtmlStepBox();
+        $params['scriptJs'] = Template::getJsScripts($jsScripts);
+        $params['boxInfo'] = Template::getFormatingHtmlStepBox(5);
 
         $html = Template::getHtml('desktop1.html', $params);
         break;

@@ -56,14 +56,22 @@ class Template
         }
         return $textLinks;
     }
+    public static function getJsScripts($getJsScripts)
+    {
+        $textLinks = '';
+        foreach($getJsScripts as $getJsScript) {
+            $textLinks .=  "<script type=\"text/javascript\" src=\"$getJsScript\"></script>";
+        }
+        return $textLinks;
+    }
 
     protected static function getHtmlStepBox($vectors)
     {
         $classes = [
             'step-first',
-            'step-second',
-            'step-third',
-            'step-fourth',
+            'step-second no-first',
+            'step-third no-first',
+            'step-fourth no-first',
             'step-fifth',
         ];
 
@@ -96,7 +104,7 @@ class Template
             $vectors[3] = 'vector2.svg';
         }
         if ($step > 4) {
-            $vectors[4] = 'vector5.svg';
+            $vectors[4] = 'vector4.svg';
         }
 
         return self::getHtmlStepBox($vectors);

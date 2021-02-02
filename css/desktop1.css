@@ -55,7 +55,7 @@ div.breadcrumb {
 
 .step-info span {
     display: inline-block;
-    width: 246px;
+    width: 220px;
     font-family: 'Manrope', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -69,5 +69,23 @@ div.breadcrumb {
     color: #0DB14B;
 }
 
+.step-box img{
+    left: -5px;
+    position: relative;
+}
+
 .step-box .step-second{
+    left: -28px;
+}
+
+.step-box .step-third{
+    left: -51px;
+}
+
+.step-box .step-fourth{
+    left: -74px;
+}
+
+.step-box .step-fifth{
+    left: -97px;
 }
