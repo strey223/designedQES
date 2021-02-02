@@ -110,4 +110,34 @@ class Template
         return self::getHtmlStepBox($vectors);
     }
 
+    public static function getFormatingHtmlStepNumber($step = 1)
+    {
+        $classes = [
+            'step-first',
+            'step-second no-first',
+            'step-third no-first',
+            'step-fourth no-first',
+            'step-fifth',
+        ];
+        $texts = [
+            'Шаг 1. Проверка ПО',
+            'Шаг 2. Запрос сертификата',
+            'Шаг 3. Выпуск сертификата',
+            'Шаг 4. Подписание бланка',
+            'Шаг 5. Запись сертификата',
+        ];
+
+        $html = '';
+        foreach ($texts as $number => $text) {
+            $class = $classes[$number] ?? '';
+
+            if ($number + 1 == $step) {
+                $class .= ' select';
+            }
+            $html .= "<span class=\"$class\"> $text </span>";
+        }
+
+        return $html;
+    }
+
 }

@@ -15,15 +15,12 @@
             <div class="header-body"> Гененрация КЭП </div>
             <div class="info-certificate"> {infoCertificate} </div>
             <div class="step-info">
-                <span class="step-first select"> Шаг 1. Проверка ПО </span>
-                <span class="step-second"> Шаг 2. Запрос сертификата </span>
-                <span class="step-third"> Шаг 3. Выпуск сертификата </span>
-                <span class="step-fourth"> Шаг 4. Подписание бланка </span>
-                <span class="step-fifth"> Шаг 5. Запись сертификата </span>
+                {stepInfo}
             </div>
             <div class="step-box">
                 {boxInfo}
             </div>
         </div>
+        <input type="hidden" value="{step}" class="step">
     </body>
 </html>

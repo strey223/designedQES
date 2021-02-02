@@ -16,7 +16,8 @@ switch ($desktop) {
         $cssLinks[] = 'css/desktop1.css';
         $params['linkCss'] = Template::getCssLinks($cssLinks);
         $params['scriptJs'] = Template::getJsScripts($jsScripts);
-        $params['boxInfo'] = Template::getFormatingHtmlStepBox(5);
+        $params['boxInfo'] = Template::getFormatingHtmlStepBox(2);
+        $params['stepInfo'] = Template::getFormatingHtmlStepNumber(2);
 
         $html = Template::getHtml('desktop1.html', $params);
         break;

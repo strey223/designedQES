@@ -1,3 +1,4 @@
 window.addEventListener('load', function () {
-    alert("It's loaded!")
+    // document.querySelector('.step-info ');
+    var step = document.querySelector('input.step').value;
 });
