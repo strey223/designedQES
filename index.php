@@ -1,5 +1,5 @@
 <?php
-include 'Template.php';
+include 'class/Template.php';
 
 $desktop = $_GET['desktop'] ?? 'one';
 $cssLinks = ['css/header.css'];

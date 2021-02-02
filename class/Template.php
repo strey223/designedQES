@@ -6,7 +6,7 @@ class Template
     protected $content;
     protected $params;
 
-    public function __construct($nameFile, $params = [], $path = __DIR__ . '/html/')
+    public function __construct($nameFile, $params = [], $path = __DIR__ . '/../html/')
     {
         $templateFile = $path . $nameFile;
 
@@ -41,7 +41,7 @@ class Template
         return $this->templateContent;
     }
 
-    public static function getHtml($nameFile, $params = [], $path = __DIR__ . '/html/')
+    public static function getHtml($nameFile, $params = [], $path = __DIR__ . '/../html/')
     {
         $template =  new static($nameFile, $params, $path);
 
