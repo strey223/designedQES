@@ -158,9 +158,56 @@ class Template
         return $textsStep[$step - 1];
     }
 
-    public static function getDivButtonStep()
+    public static function getDivButtonStep($step = 1)
     {
-        
+        $buttonsStep = [[
+                'name' => 'loadSoftware',
+                'text' => 'Загрузить ПО',
+            ], [
+                'name' => 'requestAccess',
+                'text' => 'Запросить доступ',
+            ], [
+                'name' => 'updatePage',
+                'text' => 'Обновить страницу',
+            ], [
+                'name' => 'updatePage',
+                'text' => 'Обновить страницу',
+            ], [],
+            [
+                'name' => 'write',
+                'text' => 'Записать',
+            ], [
+                'class' => 'white',
+                'name'  => 'instruction',
+                'text'  => 'Инструкция'
+            ],
+        ];
+
+        $buttonInfo = $buttonsStep[$step - 1];
+
+        if (!$buttonInfo) {
+            return '';
+        }
+        $name = '';
+        $text = '';
+        $class =  '';
+
+        if (!empty($buttonInfo['class'])) {
+            $class = $buttonInfo['class'];
+            $class = "class=\"$class\"";
+        }
+        if (!empty($buttonInfo['text'])) {
+            $text = $buttonInfo['text'];
+            $text = "value=\"$text\"";
+        }
+
+        if (!empty($buttonInfo['name'])) {
+            $name = $buttonInfo['name'];
+            $name = "$name=\"$class\"";
+        }
+
+        return "<div class='divButtonStep'> <input type='button' $class $name $text> </div>";
+
     }
 
 }

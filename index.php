@@ -19,6 +19,7 @@ switch ($desktop) {
         $params['boxInfo'] = Template::getFormatingHtmlStepBox(2);
         $params['stepInfo'] = Template::getFormatingHtmlStepNumber(2);
         $params['textStep'] = Template::getStepText(2);
+        $params['divButtonStep'] = Template::getDivButtonStep(7);
 
         $html = Template::getHtml('desktop1.html', $params);
         break;
