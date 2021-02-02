@@ -1,3 +1,7 @@
+body {
+    margin: 0px;
+}
+
 h1 {
     color: red;
     background-color: #FFFFFF;
@@ -6,6 +10,9 @@ h1 {
 .body {
     padding-left: 390px;
     background-color: #E5E5E5;
+    height: 100%;
+    width: 100%;
+    position: fixed;
 }
 
 .info-reference a {
