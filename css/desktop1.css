@@ -5,7 +5,6 @@ h1 {
 
 .body {
     padding-left: 390px;
-    padding-right: 390px;
     background-color: #E5E5E5;
 }
 
@@ -48,4 +47,27 @@ div.breadcrumb {
     font-size: 14px;
     line-height: 19px;
     color: #333333;
+}
+
+.step-info {
+    padding-top: 27px
+}
+
+.step-info span {
+    display: inline-block;
+    width: 246px;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #C8C8C8;
+}
+
+.step-info .select {
+    color: #0DB14B;
+}
+
+.step-box .step-second{
 }
