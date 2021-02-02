@@ -56,4 +56,50 @@ class Template
         }
         return $textLinks;
     }
+
+    protected static function getHtmlStepBox($vectors)
+    {
+        $classes = [
+            'step-first',
+            'step-second',
+            'step-third',
+            'step-fourth',
+            'step-fifth',
+        ];
+
+        $html = '';
+        foreach ($vectors as $number => $vector) {
+            $class = $classes[$number] ?? '';
+            $html .= "<img class=\"$class\" src=\"picture/$vector\">";
+        }
+
+        return $html;
+    }
+
+    public static function getFormatingHtmlStepBox($step = 1)
+    {
+        $vectors = [
+            'vector.svg',
+            'vector1.svg',
+            'vector1.svg',
+            'vector1.svg',
+            'vector3.svg',
+        ];
+
+        if ($step > 1) {
+            $vectors[1] = 'vector2.svg';
+        }
+        if ($step > 2) {
+            $vectors[2] = 'vector2.svg';
+        }
+        if ($step > 3) {
+            $vectors[3] = 'vector2.svg';
+        }
+        if ($step > 4) {
+            $vectors[4] = 'vector5.svg';
+        }
+
+        return self::getHtmlStepBox($vectors);
+    }
+
 }

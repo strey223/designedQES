@@ -14,6 +14,7 @@ switch ($desktop) {
     case 'one':
         $cssLinks[] = 'css/desktop1.css';
         $params['linkCss'] = Template::getCssLinks($cssLinks);
+        $params['boxInfo'] = Template::getFormatingHtmlStepBox();
 
         $html = Template::getHtml('desktop1.html', $params);
         break;
