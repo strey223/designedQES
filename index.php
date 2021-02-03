@@ -11,7 +11,7 @@ $params = [
     'infoCertificate' => 'ООО Айтиком, заявка ЕПГУ №681941 Юрченко Елена Анатольевна',
 ];
 $html = '';
-$step = 5;
+$step = 6;
 if (in_array($step, [2, 3, 4,])) {
     $cssLinks[] = 'css/detailsInfoStepCertificate.css';
     $params['detailsInfoStepCertificate'] = Template::getHtml('detailsInfoStepCertificate.html');
@@ -21,6 +21,11 @@ if ($step == 5) {
     $cssLinks[] = 'css/writeAndDownloadDocument.css';
 
     $params['writeAndDownloadDocument'] = Template::getHtml('writeAndDownloadDocument.html');
+}
+
+if ($step == 6) {
+    $cssLinks[] = 'css/saveCertificate.css';
+    $params['writeAndDownloadDocument'] = Template::getHtml('saveCertificate.html');
 }
 
 switch ($desktop) {
