@@ -84,7 +84,8 @@ body {
 /* свойства для блока, содержащего основное содержимое окна */
 .modal-body {
     position: relative;
-    padding: 15px;
+    margin-top: 40px;
+    text-align: center;
     overflow: auto;
 }
 
