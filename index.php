@@ -11,7 +11,7 @@ $params = [
     'infoCertificate' => 'ООО Айтиком, заявка ЕПГУ №681941 Юрченко Елена Анатольевна',
 ];
 $html = '';
-$step = 6;
+$step = 1;
 if (in_array($step, [2, 3, 4,])) {
     $cssLinks[] = 'css/detailsInfoStepCertificate.css';
     $params['detailsInfoStepCertificate'] = Template::getHtml('detailsInfoStepCertificate.html');
@@ -33,10 +33,10 @@ switch ($desktop) {
         $cssLinks[] = 'css/desktop1.css';
         $params['linkCss'] = Template::getCssLinks($cssLinks);
         $params['scriptJs'] = Template::getJsScripts($jsScripts);
-        $params['boxInfo'] = Template::getFormatingHtmlStepBox(2);
-        $params['stepInfo'] = Template::getFormatingHtmlStepNumber(2);
-        $params['textStep'] = Template::getStepText(2);
-        $params['divButtonStep'] = Template::getDivButtonStep(7);
+        $params['boxInfo'] = Template::getFormatingHtmlStepBox(1);
+        $params['stepInfo'] = Template::getFormatingHtmlStepNumber(1);
+        $params['textStep'] = Template::getStepText(1);
+        $params['divButtonStep'] = Template::getDivButtonStep(1);
 
         $html = Template::getHtml('desktop1.html', $params);
         break;
