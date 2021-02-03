@@ -1,13 +1,3 @@
-/* стилизация содержимого страницы */
-body {
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #292b2c;
-    background-color: #fff;
-}
-
 /* свойства модального окна по умолчанию */
 .modal {
     position: fixed; /* фиксированное положение */
@@ -74,7 +64,7 @@ body {
 }
 
 /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
-.close:focus, .close:hover {
+.modal .close:focus, .close:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -100,3 +90,5 @@ body {
     text-shadow: 0 1px 0 #fff;
     text-decoration: none;
 }
+
+.modal input
