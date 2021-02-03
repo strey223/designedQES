@@ -26,9 +26,23 @@
 
 .header .call-order {
     color: #0DB14B;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
 }
 
 .header .info-reference {
     margin-bottom: 21px;
     margin-top: 21px;
+
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #333333;
 }
