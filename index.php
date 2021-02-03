@@ -1,15 +1,27 @@
 <?php
 include 'class/Template.php';
+include 'class/TemplateAdditionalInfo.php';
 
 $desktop = $_GET['desktop'] ?? 'one';
-$cssLinks = ['css/header.css'];
+$cssLinks = ['css/header.css', 'css/modal.css'];
 $jsScripts = ['js/desktop.js'];
-$header = Template::getHtml('header.html');
 $params = [
-    'header' => $header,
+    'header' => Template::getHtml('header.html'),
+    'modal'  => Template::getHtml('modal.html'),
     'infoCertificate' => 'ООО Айтиком, заявка ЕПГУ №681941 Юрченко Елена Анатольевна',
 ];
 $html = '';
+$step = 5;
+if (in_array($step, [2, 3, 4,])) {
+    $cssLinks[] = 'css/detailsInfoStepCertificate.css';
+    $params['detailsInfoStepCertificate'] = Template::getHtml('detailsInfoStepCertificate.html');
+}
+
+if ($step == 5) {
+    $cssLinks[] = 'css/writeAndDownloadDocument.css';
+
+    $params['writeAndDownloadDocument'] = Template::getHtml('writeAndDownloadDocument.html');
+}
 
 switch ($desktop) {
     case 'one':
